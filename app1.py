@@ -1,5 +1,6 @@
 import tensorflow as tf
-import joblib
+from sklearn.externals import joblib
+
 
 # Load the models (change paths to where your models are saved)
 model_skin_cancer = tf.keras.models.load_model(r'C:\Users\navee\Downloads\skin.h5')
