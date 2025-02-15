@@ -7,10 +7,7 @@ model_maternal_health = joblib.load('https://github.com/jambilimukunda/project12
 
 
 
-
-Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> import streamlit as st
+ import streamlit as st
 from PIL import Image
 import numpy as np
 import tensorflow as tf
