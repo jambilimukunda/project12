@@ -1,5 +1,6 @@
 import tensorflow as tf
-from sklearn.externals import joblib
+import joblib
+
 
 
 # Load the models (change paths to where your models are saved)
