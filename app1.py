@@ -3,8 +3,7 @@ import joblib
 
 # Load the models (change paths to where your models are saved)
 model_skin_cancer = tf.keras.models.load_model('model/skin.h5')
-model_maternal_health = joblib.load('https://github.com/jambilimukunda/project12/tree/main/app ')
-
+model_maternal_health = joblib.load('app/model.bin')
 
 
 import streamlit as st
