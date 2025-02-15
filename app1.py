@@ -13,7 +13,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import tensorflow as tf
-from sklearn.externals import joblib
+import joblib
 
 # Set title
 st.title("AI Diagnostic Platform")
