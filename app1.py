@@ -1,3 +1,13 @@
+import tensorflow as tf
+import joblib
+
+# Load the models (change paths to where your models are saved)
+model_skin_cancer = tf.keras.models.load_model('https://github.com/jambilimukunda/project12/tree/main/SOURCE%20CODE/model ')
+model_maternal_health = joblib.load('https://github.com/jambilimukunda/project12/tree/main/app ')
+
+
+
+
 Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license()" for more information.
 >>> import streamlit as st
