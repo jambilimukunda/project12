@@ -2,7 +2,8 @@ import tensorflow as tf
 import joblib
 
 # Load the models (change paths to where your models are saved)
-model_skin_cancer = tf.keras.models.load_model('model/skin.h5')
+model_skin_cancer = tf.keras.models.load_model(r'C:\Users\navee\project12\model\skin.h5')
+
 model_maternal_health = joblib.load('app/model.bin')
 
 
