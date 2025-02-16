@@ -1,12 +1,11 @@
 import streamlit as st
-
+import xgboost as xgb
 import tensorflow as tf
 import joblib
 from PIL import Image
 import numpy as np
 
-import xgboost
-print(f"XGBoost Version: {xgboost.__version__}")
+
 
 
 # Load models once
@@ -69,13 +68,4 @@ elif option == "Maternal Health Risk":
             st.write(f"Maternal Health Risk: {risk[0]}")
         else:
             st.error("Maternal health model not loaded.")
-import xgboost as xgb
-
-# Load the old model
-model = xgb.Booster()
-model.load_model("model.bin")  # Adjust path if needed
-
-# Save in the new format
-model.save_model("model.json")
-model = xgb.Booster()
-model.load_model("model.json")            
+          
