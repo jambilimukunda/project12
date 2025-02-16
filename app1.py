@@ -5,6 +5,10 @@ import joblib
 from PIL import Image
 import numpy as np
 
+model = xgb.Booster()
+model.load_model("model.bin")  # Load the old model
+model.save_model("model.json")  # Save it in the new format
+
 # Load models once
 skin_cancer_model_path = r"C:\Users\navee\Downloads\best_model.h5"
 maternal_model_path = r"C:/Users/navee/Downloads/model.bin"
