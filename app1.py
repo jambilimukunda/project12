@@ -55,16 +55,7 @@ if option == "Skin Cancer Detection":
 # Maternal Health Risk Prediction
 elif option == "Maternal Health Risk":
     st.header("Maternal Health Risk Prediction")
-import xgboost as xgb
 
-# Load the old model
-model = xgb.Booster()
-model.load_model("model.bin")  # Adjust path if needed
-
-# Save in the new format
-model.save_model("model.json")
-model = xgb.Booster()
-model.load_model("model.json")
 
     
     
@@ -78,3 +69,13 @@ model.load_model("model.json")
             st.write(f"Maternal Health Risk: {risk[0]}")
         else:
             st.error("Maternal health model not loaded.")
+import xgboost as xgb
+
+# Load the old model
+model = xgb.Booster()
+model.load_model("model.bin")  # Adjust path if needed
+
+# Save in the new format
+model.save_model("model.json")
+model = xgb.Booster()
+model.load_model("model.json")            
