@@ -15,7 +15,7 @@ except Exception as e:
     st.error(f"Error loading skin cancer model: {e}")
 
 try:
-    maternal_health_model = joblib.load(maternal_health_model_path)
+    maternal_health_model = joblib.load(maternal_model_path)
 except Exception as e:
     st.error(f"Error loading maternal health model: {e}")
 
