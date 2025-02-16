@@ -6,7 +6,8 @@ import numpy as np
 
 # Load models once
 skin_cancer_model_path = r"C:\Users\navee\Downloads\best_model.h5"
-model_maternal_health = joblib.load(r"C:\Users\navee\Downloads\model.bin")
+model_maternal_health = r"C:\Users\navee\project12\app\model.bin"
+
 try:
     skin_cancer_model = tf.keras.models.load_model(skin_cancer_model_path)
 except Exception as e:
