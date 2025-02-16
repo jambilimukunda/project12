@@ -22,12 +22,7 @@ try:
     maternal_health_model = joblib.load(maternal_model_path)
 except Exception as e:
     st.error(f"Error loading maternal health model: {e}")
-if os.path.exists(maternal_model_path):
-    model = xgb.Booster()
-    model.load_model(maternal_model_path)
-else:
-    st.error(f"❌ Error: Model file not found at {maternal_model_path}")
-    
+   
 
 # Streamlit App
 st.title("AI Diagnostic Platform")
