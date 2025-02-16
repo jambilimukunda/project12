@@ -11,10 +11,7 @@ import numpy as np
 skin_cancer_model_path = r"C:\Users\navee\Downloads\best_model.h5"
 maternal_model_path = r"C:/Users/navee/Downloads/model.bin"
 
-model = xgb.Booster()
-model.load_model("app/model.bin")
-# Load the old model
-model.save_model("model.json") 
+
 
 try:
     skin_cancer_model = tf.keras.models.load_model(skin_cancer_model_path)
