@@ -1,10 +1,12 @@
 import streamlit as st
-import xgboost as xgb
+
 import tensorflow as tf
 import joblib
 from PIL import Image
 import numpy as np
 
+import xgboost
+print(f"XGBoost Version: {xgboost.__version__}")
 
 
 # Load models once
@@ -53,6 +55,18 @@ if option == "Skin Cancer Detection":
 # Maternal Health Risk Prediction
 elif option == "Maternal Health Risk":
     st.header("Maternal Health Risk Prediction")
+import xgboost as xgb
+
+# Load the old model
+model = xgb.Booster()
+model.load_model("model.bin")  # Adjust path if needed
+
+# Save in the new format
+model.save_model("model.json")
+model = xgb.Booster()
+model.load_model("model.json")
+
+    
     
     age = st.number_input("Enter Age", min_value=0, max_value=100)
     weight = st.number_input("Enter Weight (kg)", min_value=0)
