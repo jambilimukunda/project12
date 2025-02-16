@@ -13,7 +13,7 @@ maternal_model_path = r"C:/Users/navee/Downloads/model.bin"
 
 model = xgb.Booster()
 model.load_model("app/model.bin")
-model.load_model("model.bin")  # Load the old model
+# Load the old model
 model.save_model("model.json") 
 
 try:
@@ -25,6 +25,12 @@ try:
     maternal_health_model = joblib.load(maternal_model_path)
 except Exception as e:
     st.error(f"Error loading maternal health model: {e}")
+if os.path.exists(maternal_model_path):
+    model = xgb.Booster()
+    model.load_model(maternal_model_path)
+else:
+    st.error(f"❌ Error: Model file not found at {maternal_model_path}")
+    
 
 # Streamlit App
 st.title("AI Diagnostic Platform")
